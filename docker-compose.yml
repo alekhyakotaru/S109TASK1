@@ -34,7 +34,7 @@ services:
       db:
         condition: service_healthy # wait for MySQL to pass healthcheck
     ports:
-      - "8083:8080"
+      - "8084:8083"
     networks:
       - ecommerce-net
 
@@ -45,7 +45,7 @@ services:
     container_name: ecommerce-frontend-1
     restart: always
     ports:
-      - "8082:8080"
+      - "8085:8083"
     depends_on:
       - backend
     networks:
